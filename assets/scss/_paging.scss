@@ -1,0 +1,63 @@
+.paging {
+    &_wrap {
+        display: flex;
+        margin-top: 24px;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        gap: 0 4px;
+    }
+    &_btn {
+        
+        min-width: 30px;
+        height: 30px;
+        //padding: 0 4px;
+        box-sizing: border-box;
+        border-radius: 8px;
+        line-height: 30px;
+        font-size: 13px;
+        color: $c_font;
+        //font-family: 'Montserrat';
+        flex-shrink: 0;
+        border: 1px solid transparent;
+        font-weight: 500;
+        
+        background-repeat: no-repeat;
+        background-position: center center;
+        
+        &.paging_nav {
+            width: 20px;
+            height: 20px;
+            min-width: 20px;
+        }
+        
+        &.ty_first {
+            background-image: url(../images/paging_first.svg);
+        }
+        &.ty_prev {
+            background-image: url(../images/paging_prev.svg);
+            //margin-right: 4px;
+        }
+        &.ty_next {
+            background-image: url(../images/paging_next.svg);
+            //margin-left: 4px;
+        }
+        &.ty_last {
+            background-image: url(../images/paging_last.svg);
+        }
+    }
+    &_list {
+        display: flex;
+        gap: 0 5px;
+        .paging_btn {
+            background-color: $c_bg;
+            &:hover {
+                background-color: $c_key3;
+            }
+            &.current {
+                background-color: $c_key;
+                color: #fff;
+            }
+        }
+    }
+}
