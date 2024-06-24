@@ -44,4 +44,43 @@ export const StyledLink = styled(Link)`
   margin-left: 50px;
 `;
 
-export const SearchStyled = styled.div``;
+export const SearchStyled = styled.div`
+  margin-left: 50px;
+  margin-right: 50px;
+  box-shadow: inset 0 0 20px dodgerblue;
+  display: flex;
+
+  & .select-box {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    z-index: 99;
+    &::after {
+      content: "";
+      width: 18px;
+      height: 18px;
+      background-image: url(../images/select_arrow.svg);
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: cover;
+      flex-shrink: 0;
+    }
+
+    .options {
+      display: none;
+    }
+    &.on {
+      z-index: 100;
+
+      .options {
+        display: block;
+      }
+
+      &::after {
+        transform: rotate(180deg);
+      }
+    }
+  }
+`;
