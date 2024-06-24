@@ -1,5 +1,6 @@
 import styled from "styled-components";
-import iconLogo from "../../../../assets/images/logo.svg";
+
+import { Link } from "react-router-dom";
 
 export const HeaderStyles = styled.div`
   position: sticky;
@@ -33,10 +34,14 @@ export const LogoStyles = styled.div`
   }
 `;
 
-{
-  /* <h1 className="logo">
-  <a href="">
-    <img src="../assets/images/logo.svg" alt="" />
-  </a>
-</h1>; */
-}
+export const NavStyles = styled.nav`
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin-left: 20px;
+`;
+
+export const StyledLink = styled(Link)`
+  margin-left: 50px;
+`;
+
+export const SearchStyled = styled.div``;

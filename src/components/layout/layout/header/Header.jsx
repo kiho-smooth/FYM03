@@ -1,5 +1,11 @@
 import React from "react";
-import { HeaderStyles, LogoStyles } from "./Header.style";
+import {
+  HeaderStyles,
+  LogoStyles,
+  NavStyles,
+  SearchStyled,
+  StyledLink,
+} from "./Header.style";
 
 const Header = () => {
   const userToggle = () => {
@@ -14,21 +20,19 @@ const Header = () => {
       <HeaderStyles>
         <LogoStyles>
           <h1 className="logo">
-            <a href="">
+            <StyledLink href="">
               <img src="../assets/images/logo.svg" alt="" />
-            </a>
+            </StyledLink>
           </h1>
         </LogoStyles>
 
-        <nav className="nav">
-          <a href="" className="nav_btn">
-            데이터베이스
-          </a>
-          <a href="library_dashboard_002.html" className="nav_btn">
+        <NavStyles>
+          <StyledLink to="/">데이터베이스</StyledLink>
+          <StyledLink to="library_dashboard_002.html">
             소재라이브러리
-          </a>
-        </nav>
-        <div className="srch">
+          </StyledLink>
+        </NavStyles>
+        <SearchStyled>
           <div className="select-box ty_small">
             <input type="text" className="select-input" value="매체" readOnly />
             <ul className="options">
@@ -133,7 +137,7 @@ const Header = () => {
 
                 </script>
                 <!--// [D][개발시 삭제] UI 확인용 스크립트 --> */}
-        </div>
+        </SearchStyled>
         <div className="user ex_close">
           <button
             type="button"
